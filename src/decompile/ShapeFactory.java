@@ -11,6 +11,10 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
+/**
+ * Class for creating object ShapeFactory.
+ * @author WEB
+ */
 public class ShapeFactory {
     public Shape shape;
     public BasicStroke stroke = new BasicStroke(3.0f);
@@ -18,6 +22,10 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+    /**
+     * Method create object of class ShapeFactory.
+     * @param shape_type 
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {

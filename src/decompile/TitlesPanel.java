@@ -15,6 +15,10 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+
+/**
+ * Class create panel witn shapes. Realize ActionListener for rewriting panel by timer.
+ */
 public class TitlesPanel extends JPanel implements ActionListener {
     private Graphics2D g2d;
     private Timer animation;
@@ -22,6 +26,10 @@ public class TitlesPanel extends JPanel implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+    /**
+     * Method for creating object TitlesPanel
+     * @param _shape define type shape and view border of shape
+     */
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -36,6 +44,11 @@ public class TitlesPanel extends JPanel implements ActionListener {
         }
     }
 
+    
+    /**
+     * Draw panel with shapes.
+     * @param g object of class Graphics
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
